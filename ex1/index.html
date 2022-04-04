@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#quadrado{
+            font: normal 5rem Arial ;
+            background: rgb(180, 76, 76);
+            color: rgb(255, 255, 255);
+            width: 600px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="quadrado">
+        Clique Aqui!
+    </div>
+
+    <script>
+        var quadrado = window.document.getElementById('quadrado')
+       quadrado.addEventListener('mouseenter', entrar )
+        quadrado.addEventListener('click', clicar)
+        quadrado.addEventListener('mouseout', sair)
+        
+        function entrar() {
+            quadrado.innerText = 'Entrou'
+            quadrado.style.background = 'red'
+
+        }
+
+        function clicar() {
+            quadrado.innerText = 'Clicou'
+            quadrado.style.background = 'black'
+            
+            
+        }
+
+        function sair() {
+            quadrado.innerText = 'Sair'
+            quadrado.style.background ='blue'
+            
+        }
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
